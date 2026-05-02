@@ -1,8 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-echo -e "\033[92m[*] s123 အား ထည့်သွင်းနေပါသည်...\033[0m"
+echo -e "\033[92m[*] device34mmh...\033[0m"
 
-# ၁။ လိုအပ်တဲ့ Python နဲ့ Library တွေ သွင်းမယ်
+# ၁။  Python and Library 
 pkg update && pkg upgrade -y
 pkg install python -y
 pip install requests
@@ -30,5 +30,5 @@ fi
 curl -LO https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh_run.py
 
 echo -e "\033[92m[✔] အောင်မြင်စွာ ထည့်သွင်းပြီးပါပြီ!\033[0m"
-echo -e "\033[93mအသုံးပြုရန်: cd ~/Myominhter && python device34mmh_run.py\033[0m"
+echo -e "\033[93mအသုံးပြုရန်: cd ~/myomin && python device34mmh_run.py\033[0m"
   
