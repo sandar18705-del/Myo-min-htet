@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+Myo-min-htetyo-min-hteryo-min-hter!/data/data/com.termux/files/usr/bin/bash
 
 echo -e "\033[92m[*] device34mmh...\033[0m"
 
@@ -18,7 +18,7 @@ ARCH=$(getprop ro.product.cpu.abi)
 if [ "$ARCH" = "arm64-v8a" ]; then
     echo -e "\033[94m[*] I see your phone is 64-bit ,so i am downloading 64-bit version ...\033[0m"
     # ဖိုင်ကို အရင်ဒေါင်းပြီးမှ နာမည်ပြောင်းမယ်
-    curl -LO https://raw.githubusercontent.com/sandar18705-del/Myo-min-hter/main/device34mmh_64bit.so
+    curl -LO https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh_64bit.so
     mv device34mmh_64bit.so device34mmh.so
 else
     echo -e "\033[94m[*] I see your phone is 32-bit ,so i am downloading 32-bit version ...\033[0m"
