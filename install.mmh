@@ -30,5 +30,5 @@ fi
 curl -LO https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh_run.py
 
 echo -e "\033[92m[✔] အောင်မြင်စွာ ထည့်သွင်းပြီးပါပြီ!\033[0m"
-echo -e "\033[93mအသုံးပြုရန်: cd ~/Myomin && python device34mmh_run.py\033[0m"
+echo -e "\033[93mအသုံးပြုရန်: cd ~/Myominhtet && python device34mmh_run.py\033[0m"
   
