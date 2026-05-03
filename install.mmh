@@ -1,9 +1,9 @@
-Myo-min-htetyo-min-hteryo-min-hter!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
-echo -e "\033[92m[*] device34mmh...\033[0m"
+echo -e "\033[92m[*] device34mmh Installer Starting...\033[0m"
 
-# ၁။  Python and Library 
-pkg update && pkg upgrade -y
+# ၁။ လိုအပ်တာတွေ အရင်သွင်းမယ်
+apt update && apt upgrade -y
 pkg install python -y
 pip install requests
 
@@ -12,23 +12,21 @@ rm -rf ~/Myominhtet
 mkdir -p ~/Myominhtet
 cd ~/Myominhtet
 
-# ၃။ ဖုန်းရဲ့ Bit (Architecture) ကို စစ်ဆေးမယ်
+# ၃။ ဖုန်းရဲ့ Bit ကို စစ်ပြီး မှန်ကန်တဲ့ဖိုင်ကို ဒေါင်းမယ်
 ARCH=$(getprop ro.product.cpu.abi)
 
-if [ "$ARCH" = "arm64-v8a" ]; then
-    echo -e "\033[94m[*] I see your phone is 64-bit ,so i am downloading 64-bit version ...\033[0m"
-    # ဖိုင်ကို အရင်ဒေါင်းပြီးမှ နာမည်ပြောင်းမယ်
-    curl -LO https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh_64bit.so
-    mv device34mmh_64bit.so device34mmh.so
+if [[ "$ARCH" == *"arm64"* ]]; then
+    echo -e "\033[94m[*] 64-bit Device တွေ့ရှိပါတယ်... 64-bit version ကို ဒေါင်းနေပါတယ်...\033[0m"
+    # 64-bit အတွက် GitHub က device34mmh_64bit.so ကို ဒေါင်းပြီး device34mmh.so အဖြစ် သိမ်းမယ်
+    curl -L -o device34mmh.so https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh_64bit.so
 else
-    echo -e "\033[94m[*] I see your phone is 32-bit ,so i am downloading 32-bit version ...\033[0m"
-    curl -LO https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh.so
-    mv device34mmh.so device34mmh.so
+    echo -e "\033[94m[*] 32-bit Device တွေ့ရှိပါတယ်... 32-bit version ကို ဒေါင်းနေပါတယ်...\033[0m"
+    # 32-bit အတွက် GitHub က device34mmh.so ကို ဒေါင်းပြီး device34mmh.so အဖြစ်ပဲ သိမ်းမယ်
+    curl -L -o device34mmh.so https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh.so
 fi
 
-# ၄။ Starter ဖိုင်ကို ဒေါင်းမယ်
-curl -LO https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh_run.py
+# ၄။ Starter python ဖိုင်ကို ဒေါင်းမယ်
+curl -L -o device34mmh_run.py https://raw.githubusercontent.com/sandar18705-del/Myo-min-htet/main/device34mmh_run.py
 
-echo -e "\033[92m[✔] အောင်မြင်စွာ ထည့်သွင်းပြီးပါပြီ!\033[0m"
+echo -e "\033[92m[✔] အားလုံး အောင်မြင်စွာ ထည့်သွင်းပြီးပါပြီ!\033[0m"
 echo -e "\033[93mအသုံးပြုရန်: cd ~/Myominhtet && python device34mmh_run.py\033[0m"
-  
